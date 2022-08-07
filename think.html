@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+          body {
+              background:url("pic/1.jpg")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
+              background-size:cover;  
+              background-attachment:fixed;        
+          }
+          div{
+          
+          box-sizing: border-box;
+          margin-left:110px;
+          }
+          .div1{
+          width: 1000px;
+          height: 450px;
+          background-color: rgb(253 245 230);
+          }
+          .div2{
+          width: 1000px;
+          height: 230px;
+          background-color: rgb(255 235 205);
+          }
+  </style>
+</head>
+<body>
+  <div class="div1">
+    <h2 align="left">&nbsp;<a href="红色建党网站.html"><font color="black">主页</font></a></h2>
+    <br>
+    <p style="text-indent:2em;">
+      思想碰撞，留下你此刻的想法吧！</p>
+    <input type="text" id="money" value="" style="border:none;position:relative;left:40px;top:10px;width: 920px;height: 260px;"/>
+  </div>
+
+  <div class="div2">
+    <br>
+    <p style="text-indent:2em;">
+      在下方输入：</p>
+    <input type="text" name="totalMoney" id="totalMoney"
+    style="border:none;position:relative;left:40px;top:10px;width: 920px;height: 100px;"    
+    onkeyup="document.getElementById('money').value=this.value" 
+    onblur="document.getElementById('money').value=this.value">
+  </div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>movie</title>
+      <style>
+        body {
+            background:url("pic/9.jpg")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
+            background-size:cover;  
+            background-attachment:fixed;        
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bigbox{
+            box-sizing: border-box;
+            width: 1000px;
+            height: 400px;
+            margin: -36px auto;
+        }
+        .neirong{
+            width: 1000px ;
+            height: 2000px;
+            background-color: rgb(253 245 230);
+        } 
+        .neirong{
+            padding: 22px;
+            box-sizing: border-box;
+        } 
+        .neirong div{
+            font-size: 20px;
+        } 
+        .shadow{
+            position:fixed;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+            background-color:black;
+            opacity:0.6;
+            z-index:9;
+        }
+        .boxed-group {
+            width:800px;
+            height:500px;
+            backgpxround-color:#778899;
+            position:fixed;
+            left:28%;
+            top:20%;
+            margin-left:-100px;
+            margin-top:-100px;
+            z-index:10;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .boxed-group h3{
+            font-weight: 400;
+            margin: 0;
+        }
+        .boxed-group h3 {
+            padding: 12px 20px;
+            color: #fff;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            background-color: #434a54;
+        }
+        .boxed-group .boxed-group-inner {
+            height:500px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #aaa;
+            border-color: #e6e9ed;
+            background-color: #fff;
+        }
+        .btn-danger {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+            color: #fff;
+        }
+        #play-video{
+            background-color: #c0392b;
+            border: 1px solid #ab3326;
+        }
+        #cancel{
+            background-color: #C0C0C0;
+            border: 1px solid #C0C0C0;
+        }
+        #play-video:hover{
+            background-color: #ab3326;
+        }
+        #cancel:hover{
+            background-color: #696969;
+        }
+        .footer{
+            text-align: center;
+            padding-top: 10px;
+        }    
+    </style>
+  </head>
+  <body>
+  <div class="bigbox">
+    <div class="neirong">
+      <br><br>
+      <h2 align="left">
+      <a href="红色建党网站.html"><font color="black">主页</font></a></h2>
+      <p style="text-indent:2em;position:absolute;left:580px;top=60px;right:180px;">
+        电视剧《觉醒年代》以1915年《青年杂志》问世到1921年《新青年》成为中国共产党机关刊物为贯穿，展现了从新文化运动、五四运动到中国共产党建立这段波澜壮阔的历史画卷，讲述了觉醒年代社会风情和百态人生，艺术地再现了一百年前中国的先进分子和一群热血青年演绎出的一段追求真理、燃烧理想的澎湃岁月，深刻地揭示了马克思主义与中国工人运动相结合和中国共产党建立的历史必然性。</p>
+      <img style="position:relative;left:100px;" src="pic/61.jpg" width=250px><br>
+      <input type="button" style="position:relative;left:180px;width:80px;height:40px;"value="播放" onclick="ShowModel1();"/><br><br>
+      <div id="dialog1">
+    <div class="shadow"></div>
+    <div class="site-content cf">
+        <div class="boxed-group">
+            <h3>视频播放</h3>
+            <div class="boxed-group-inner">
+                <video width="100%" height="500" controls>
+                    <source src="pic/jxnd.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="footer">
+              <button href="#" class="btn btn-danger boxed-action" id="cancel" onclick="cancel1()">取消
+              </button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <p style="text-indent:2em;position:absolute;left:580px;top=1560px;right:180px;">
+        《理想照耀中国》系列短剧是由国家广播电视总局策划组织制作的庆祝中国共产党成立100周年的主题作品，该剧以“革命时期、建设时期、改革时期、复兴时期”四个阶段的40组人物和闪光故事，记录中国共产党诞生一百年以来团结带领人民，高擎理想和信仰的炬火，谋求民族独立、人民解放、国家富强，为实现中华民族复兴中国梦不息奋斗的动人征程</p>
+    <img style="position:relative;left:100px;" src="pic/62.jpg" width=250px><br>
+    <input type="button" style="position:relative;left:180px;width:80px;height:40px;"value="播放" onclick="ShowModel2();"/><br><br>
+      <div id="dialog2">
+    <div class="shadow"></div>
+    <div class="site-content cf">
+        <div class="boxed-group">
+            <h3>视频播放</h3>
+            <div class="boxed-group-inner">
+                <video width="100%" height="500" controls>
+                    <source src="pic/lxzyzg.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="footer">
+              <button href="#" class="btn btn-danger boxed-action" id="cancel" onclick="cancel2()">取消
+              </button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <p style="text-indent:2em;position:absolute;left:580px;top=2560px;right:180px;">
+    《革命者》影片围绕1912至1927年波澜壮阔的历史展开，讲述了中国共产主义运动的先驱，伟大的马克思主义者，杰出的无产阶级革命家，中国共产党主要创始人之一的李大钊积极探索改变中国、拯救民族的热血历程，热忱追寻正确革命道路的故事。也正是在他的感召之下，毛泽东等一批又一批仁人志士热血青年及各阶层群众前仆后继积极投身到传播马克思主义、建立中国共产党和建设新中国的革命进程中。</p>
+    <img style="position:relative;left:100px;" src="pic/65.jpg" width=250px><br>
+    <input type="button" style="position:relative;left:180px;width:80px;height:40px;"value="播放" onclick="ShowModel3();"/><br><br>
+      <div id="dialog3">
+    <div class="shadow"></div>
+    <div class="site-content cf">
+        <div class="boxed-group">
+            <h3>视频播放</h3>
+            <div class="boxed-group-inner">
+                <video width="100%" height="500" controls>
+                    <source src="pic/gmz.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="footer">
+              <button href="#" class="btn btn-danger boxed-action" id="cancel" onclick="cancel3()">取消
+              </button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <p style="text-indent:2em;position:absolute;left:580px;top=3560px;right:180px;">
+    1921年的上海，租界林立，局势剑拔弩张。13位来自五湖四海，平均年龄仅28岁的热血青年，从民族危亡的困境出发，将青春理想化作救国救民、寻求真理的信念，突破国际各股复杂势力的监控和追踪，在上海共聚，在陈独秀、李大钊的领导和推进下，1921年7月23日，中国共产党第一次全国代表大会在上海召开，宣告这个改变了亿万国民前途命运的政党正式成立。自此，中国历史进入了新篇章。</p>
+    <img style="position:relative;left:100px;" src="pic/64.jpg" width=250px><br>
+    <input type="button" style="position:relative;left:180px;width:80px;height:40px;"value="播放" onclick="ShowModel4();"/><br><br>
+      <div id="dialog4">
+    <div class="shadow"></div>
+    <div class="site-content cf">
+        <div class="boxed-group">
+            <h3>视频播放</h3>
+            <div class="boxed-group-inner">
+                <video width="100%" height="500" controls>
+                    <source src="pic/1921.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="footer">
+              <button href="#" class="btn btn-danger boxed-action" id="cancel" onclick="cancel4()">取消
+              </button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <script>
+    document.getElementById("dialog1").style.display="none";
+    function ShowModel1(){
+        document.getElementById("dialog1").style.display="";
+    }
+    function cancel1(){
+        document.getElementById("dialog1").style.display="none";
+    }
+
+    document.getElementById("dialog2").style.display="none";
+    function ShowModel2(){
+        document.getElementById("dialog2").style.display="";
+    }
+    function cancel2(){
+        document.getElementById("dialog2").style.display="none";
+    }
+
+    document.getElementById("dialog3").style.display="none";
+    function ShowModel3(){
+        document.getElementById("dialog3").style.display="";
+    }
+    function cancel3(){
+        document.getElementById("dialog3").style.display="none";
+    }
+
+    document.getElementById("dialog4").style.display="none";
+    function ShowModel4(){
+        document.getElementById("dialog4").style.display="";
+    }
+    function cancel4(){
+        document.getElementById("dialog4").style.display="none";
+    }
+  </script>
+  </body>
+</html>
